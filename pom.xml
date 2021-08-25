@@ -4,14 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.cloud</groupId>
+    <groupId>com.admirewhite.cloud</groupId>
     <artifactId>SpringCloudLearning</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-
-    </modules>
     <packaging>pom</packaging>
     <description>父工程,统一管理jar包版本</description>
+
+    <modules>
+        <module>cloud-provider-payment8001</module>
+        <module>cloud-consumer-order80</module>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
+        <module>cloud-provider-payment8002</module>
+        <module>cloud-consumer-feign-order80</module>
+    </modules>
+
+
 
     <!--统一管理jar包版本-->
     <properties>
@@ -43,7 +52,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--Spring cloud Hoxton.SR1-->
+            <!--Spring springcloud Hoxton.SR1-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -51,7 +60,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--Spring cloud alibaba 2.1.0.RELEASE-->
+            <!--Spring springcloud alibaba 2.1.0.RELEASE-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
